@@ -23,3 +23,12 @@ def new_bullet(PAGE,TEXT):
 	# Add new bullet
 	bullet = PAGE.children.add_new(BulletedListBlock, title = TEXT)
 	return bullet
+
+def new_text(PAGE,TEXT):
+
+	# Obtain the `token_v2` value by inspecting your browser cookies on a logged-in session on Notion.so
+	client = NotionClient(token_v2=TOKEN FROM COOKIES)
+	
+	# Add new text
+	text = PAGE.children.add_new(TextBlock, title = TEXT)
+	return text
